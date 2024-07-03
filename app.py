@@ -87,7 +87,7 @@ def main():
             positive_reviews_text = ' '.join(classified_reviews[classified_reviews['Sentiment'] == 'Positive']['Review Text'].dropna())
             generate_wordcloud(positive_reviews_text, stopwords, "Nube de Palabras Positivas")
         
-        if st.button("Generar Nube de palabras más negativas"):
+        if st.button("Generar nube de palabras más negativas"):
             negative_reviews_text = ' '.join(classified_reviews[classified_reviews['Sentiment'] == 'Negative']['Review Text'].dropna())
             generate_wordcloud(negative_reviews_text, stopwords, "Nube de Palabras Negativas")
         
